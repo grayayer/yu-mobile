@@ -1096,6 +1096,14 @@ body.single-announcements #content h2{
 
 }
 
+div.post-title.heading-font.announcements {
+	display: none;
+}
+
+body.post-type-archive-announcements div.post-title.heading-font.announcements {
+	display: block;
+}
+
 body.single-announcements #content h3{
 	margin-top: 0;
 	font-weight: normal;

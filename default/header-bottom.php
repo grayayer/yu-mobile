@@ -63,5 +63,6 @@
 <?php if ( is_archive() ) { ?>
 	<div class="post-page-head-area bauhaus">
 		<?php wptouch_fdn_archive_title_text(); ?>
+		<div class="post-title heading-font announcements">Announcements</div>
 	</div>
 <?php } ?>

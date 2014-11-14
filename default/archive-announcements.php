@@ -1,25 +1,9 @@
-<?php // get_header(); ?>
+<?php get_header(); ?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<title><?php wp_title( ' | ', true, 'right' ); ?></title>
-		<?php wptouch_head(); ?>
-	</head>
-	
-	<!-- Help speed up display of the page -->
-	<?php flush(); ?>
-	
-	<body <?php body_class( wptouch_get_body_classes() ); ?>>
-		
-		<?php do_action( 'wptouch_preview' ); ?>
-		
-		<?php do_action( 'wptouch_body_top' ); ?>
-		
-		<?php get_template_part( 'header-bottom-announcements' ); ?>
+
 
 <div id="content">
+
 	<?php if ( wptouch_have_posts() ) while ( wptouch_have_posts() ) { ?>
 		<?php wptouch_the_post(); ?>
 		<div class="<?php wptouch_post_classes(); ?>">
@@ -28,6 +12,7 @@
 	<?php } else { ?> 
 		<!-- no posts -->
 	<?php } ?>
+
 	<?php if ( foundation_is_theme_using_module( 'infinite-scroll' ) ) { ?>		
 
 		<?php if ( get_next_posts_link() ) { ?>
