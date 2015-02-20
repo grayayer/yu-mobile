@@ -81,7 +81,7 @@ header img {
 #menu-toggle:after {
 	content: "\e80a";
 	display: block;
-	font: 110% 'fontello', sans-serif;
+	font: 110% 'wptouch-icons', sans-serif;
 	padding: 18px;
 }
 
@@ -94,7 +94,7 @@ header img {
 #search-toggle:after {
 	content: "\e809";
 	display: block;
-	font: 110% 'fontello', sans-serif;
+	font: 110% 'wptouch-icons', sans-serif;
 	padding: 18px;
 }
 
@@ -216,7 +216,7 @@ header img {
 	margin-left: 8px;
 	top: 2px;
 	position: relative;
-	font-family: 'fontello';
+	font-family: 'wptouch-icons';
 }
 
 .landscape #slider a p.heading-font, .landscape #slider a p.featured-date {
@@ -246,7 +246,7 @@ header img {
 #slider .comments-number:after {
 	content: "\e812";
 	display: block;
-	font: 36px 'fontello', sans-serif;
+	font: 36px 'wptouch-icons', sans-serif;
 	position: absolute;
 	top: 0;
 	left: -60%;
@@ -429,7 +429,7 @@ ul.dots {
 .loop-link .comments:after {
 	content: "\e812";
 	display: block;
-	font: 30px 'fontello', sans-serif;
+	font: 30px 'wptouch-icons', sans-serif;
 	position: absolute;
 	left: 50%;
 	margin-left: -15px;
@@ -846,7 +846,7 @@ form#commentform input, form#commentform textarea {
 
 .search span.select-wrap i.icon-caret-down {
 	content: "\e844";
-	font: 110% 'fontello', sans-serif;
+	font: 110% 'wptouch-icons', sans-serif;
 	position: relative;
 	z-index: 2;
 	top: 1px;
@@ -1098,6 +1098,14 @@ form#commentform input, form#commentform textarea {
 
 /******* gray's modifications **********/
 
+$btn_color: #B1CB20;
+
+
+body.home .post-page-head-area.bauhaus {
+	display:none;
+}
+
+
 .post-title.heading-font.announcements {
 	font-size: 1.5em;
 	color: rgba(0,0,0,.7);
@@ -1128,29 +1136,44 @@ a.actionbutton:empty {
 	display:none;
 }
 
-a.actionbutton {
-	border: #D3E4B8 1px solid;
-	color: #FFFFFF;
+
+a.actionbutton, a button {
+	//border:#D3E4B8 1px solid;
+
+	color: #FFFFFF !important;
 	font-weight:bold;
 	text-decoration:none;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
+  	text-align: center;	
+	text-transform: uppercase;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	
 	border-radius: 4px;
-	padding:5px;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	transition: all .3s ease-in-out;
+	padding:.7em 1.3em .5em;
+	margin:1em 0 2em;
+    position: relative;
+	display: inline-block;
 	letter-spacing: 1px;
-	text-shadow: -1px -1px 0 #86B70B;
-	background: #9cc878; /* Old browsers */
-	display: table;
-	margin: 15px auto;
-}	
+	cursor: pointer;
+	background: $btn_color;
+	-webkit-box-shadow: inset 0 -2px darken($btn_color, 5%);
+	box-shadow: inset 0 -2px darken($btn_color, 5%);
+	border-bottom: 1px solid darken($btn_color, 5%);
 
-a.actionbutton:hover {
-background: rgb(191,210,85); /* Old browsers */
-text-decoration:none;
+	&:hover, &:active {
+		background: darken($btn_color, 5%);
+		-webkit-box-shadow: inset 0 -2px darken($btn_color, 10%);
+		box-shadow: inset 0 -2px darken($btn_color, 10%);
+		border-bottom: 1px solid darken($btn_color, 10%);		
+	}
 }
 
-a.actionbutton:active {
-background: rgb(158,203,45); /* Old browsers */
+.loop-link .post-date-author { /*ensures that the subtitle doesn't bleed into the arrow*/
+	margin: 0 40px 0 50px;
 }
 
 div.healcode.schedule.mindbody_classic div:last-of-type, div.healcode.schedule.list_view div:last-of-type a img{
